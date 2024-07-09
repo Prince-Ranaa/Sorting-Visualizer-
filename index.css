@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(51, 51, 51) !important;
+}
+
+h1 {
+    color: white !important;
+    text-align: center;
+}
+
+#barContainer {
+    padding-top: 10px;
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+
+
+}
+
+.bars {
+    background-color: rgb(218, 218, 130);
+    padding: 3px;
+}
