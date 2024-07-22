@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="./js_files/sorting.js" defer></script>
-    <script src="./js_files/bubble.js" defer></script>
+    <script src="./js_files/sorting.js"></script>
+
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <button class="btn btn-outline-primary newArray" onclick="generateNewArray()">New Array</button>
         <div>
             <button class="btn btn-outline-primary bubbleSort" onclick="bubbleSort()">Bubble Sort</button>
-            <button class="btn btn-outline-primary insertionSort">Insertion Sort</button>
+            <button class="btn btn-outline-primary insertionSort" onclick="insertionSort()">Insertion Sort</button>
             <button class="btn btn-outline-primary mergeSort">Merge Sort</button>
             <button class="btn btn-outline-primary quickSort">Quick Sort</button>
             <button class="btn btn-outline-primary selectionSort">Selection Sort</button>
@@ -27,6 +28,14 @@
     </div>
 
     <div id="barContainer" class="d-flex"></div>
+
+    <script>
+        let delay = 10;
+
+    </script>
+    <script src="./js_files/bubble.js"></script>
+    <script src="./js_files/insertion.js"></script>
+
 </body>
 
 </html>

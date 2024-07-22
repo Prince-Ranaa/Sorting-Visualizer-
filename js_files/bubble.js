@@ -1,4 +1,3 @@
-let delay = 1;
 
 function bubbleSort() {
     let bars = document.getElementsByClassName("bars");
@@ -33,17 +32,13 @@ function bubbleSort() {
 
                     }, delay);
 
-                }, totalDelay);
+                }, totalDelay * 2);
             })(i, j, totalDelay);
-
-            totalDelay += delay * 2;
+            totalDelay += delay;
         }
     }
 
     setTimeout(() => {
         bars[0].style.backgroundColor = "green";
-        console.log("apple")
-    }, delay * 100 * 100 + 100);
+    }, delay * 100 * 100 + 10);
 }
-
-bubbleSort();
