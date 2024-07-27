@@ -1,6 +1,5 @@
 
 function insertionSort() {
-    console.log(numberArray);
     let bars = document.getElementsByClassName("bars");
     let totalDelay = 0;
     bars[0].style.backgroundColor = "green";
