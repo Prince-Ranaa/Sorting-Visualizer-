@@ -1,7 +1,7 @@
 
 function generateNewArray() {
     numberArray = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 100; i++) {
         let number = Math.floor(Math.random() * 100) + 1;
         numberArray.push(number);
     }
@@ -14,8 +14,7 @@ function visualizeArray(array) {
     array.forEach(element => {
         const div = document.createElement('div');
         div.className = "bars";
-        // div.style.height = element * 5 + "px";
-        div.style.height = element + "px";
+        div.style.height = element * 5 + "px";
         div.style.width = "10px";
         container.appendChild(div);
     });

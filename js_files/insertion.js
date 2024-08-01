@@ -1,46 +1,31 @@
 
-function insertionSort() {
+async function insertionSort() {
     let bars = document.getElementsByClassName("bars");
-    let totalDelay = 0;
-    bars[0].style.backgroundColor = "green";
+    bars[0].style.backgroundColor = "green"
 
-    for (let i = 1; i < numberArray.length; i++) {
-        let j = i;
-        let key = numberArray[j]
-        let keyBarHeight = bars[j].style.height
+    for (i = 1; i < numberArray.length; i++) {
 
+        if (numberArray[i] < numberArray[i - 1] && i > 0) {
+            while (numberArray[i] < numberArray[i - 1] && i > 0) {
 
-        while (j > 0) {
-            console.log(j);
+                bars[i].style.backgroundColor = "red"
+                await new Promise(resolve => setTimeout(resolve, delay));
 
-            (function (i, j, totalDelay) {
-                setTimeout(() => {
-                    console.log(j)
+                let tempNo = numberArray[i]
+                numberArray[i] = numberArray[i - 1]
+                numberArray[i - 1] = tempNo;
+                bars[i].style.height = numberArray[i] * 5 + "px"
+                bars[i - 1].style.height = numberArray[i - 1] * 5 + "px"
+                bars[i].style.backgroundColor = "green"
 
-
-                    if (numberArray[j - 1] > key) {
-                        bars[j].style.backgroundColor = "red"
-                    }
-
-                    setTimeout(() => {
-                        if (numberArray[j - 1] > key) {
-                            numberArray[j] = numberArray[j - 1];
-                            numberArray[j - 1] = key;
-
-                            bars[j].style.height = bars[j - 1].style.height;
-                            bars[j - 1].style.height = keyBarHeight;
-                        }
-                        bars[j].style.backgroundColor = "green"
-
-                    }, delay);
-                    console.log(numberArray);
-
-
-                }, totalDelay);
-            })(i, j, totalDelay);
-            totalDelay += delay;
-            j--;
-            continue;
+                if (i >= 1) {
+                    bars[i - 1].style.backgroundColor = "red"
+                }
+                i--;
+            }
         }
+        bars[i].style.backgroundColor = "green"
+
+
     }
 }

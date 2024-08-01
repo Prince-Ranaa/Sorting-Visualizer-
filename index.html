@@ -16,27 +16,28 @@
 <body>
     <h1>Sorting Visualizer</h1>
 
-    <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex justify-content-between mb-4 sorting-btns">
         <button class="btn btn-outline-primary newArray" onclick="generateNewArray()">New Array</button>
         <div>
             <button class="btn btn-outline-primary bubbleSort" onclick="bubbleSort()">Bubble Sort</button>
+            <button class="btn btn-outline-primary selectionSort" onclick="selectionSort()">Selection Sort</button>
             <button class="btn btn-outline-primary insertionSort" onclick="insertionSort()">Insertion Sort</button>
             <button class="btn btn-outline-primary mergeSort" onclick="mergeSortFunction()">Merge Sort</button>
-            <button class="btn btn-outline-primary quickSort">Quick Sort</button>
-            <button class="btn btn-outline-primary selectionSort" onclick="selectionSort()">Selection Sort</button>
+            <button class="btn btn-outline-primary quickSort" onclick="quickSortFunction()">Quick Sort</button>
         </div>
     </div>
 
     <div id="barContainer" class="d-flex"></div>
 
     <script>
-        let delay = 400;
+        let delay = 1
 
     </script>
     <script src="./js_files/bubble.js"></script>
     <script src="./js_files/insertion.js"></script>
     <script src="./js_files/selection.js"></script>
     <script src="./js_files/merge.js"></script>
+    <script src="./js_files/quick.js"></script>
 
 </body>
 
